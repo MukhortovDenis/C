@@ -1,0 +1,103 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+setvbuf(stdout, NULL, _IONBF, 0);
+setvbuf(stderr, NULL, _IONBF, 0);
+
+    float a, b, i;
+    int s, n, o, x = 1;
+    do
+    {
+        puts("Start? yes - 1/no - 0");
+                scanf("%i", &o);
+
+        switch(o)
+        {
+            case 0:
+                printf("Vikluchenie");
+                break;
+
+            case 1:
+                puts("Vvedite kod operacii.\n");
+                    scanf("%i", &s);
+                           switch(s)
+                           {
+                               case 1:
+                                   puts("Vi vibrali operaciyu 'slojenie'.");
+                                   puts("Vvedite pervoe znachenie.");
+                                   scanf("%f", &a);
+                                   puts("Vvedite vtoroe znachenie.");
+                                   scanf("%f", &b);
+                                   printf("A + B = %f", a + b);
+                                   break;
+                               case 2:
+                                   puts("Vvedite pervoe znachenie 'Vichitanie'.");
+                                   scanf("%f", &a);
+                                   puts("Vvedite vtoroe znachenie.");
+                                   scanf("%f", &b);
+                                   printf("A - B = %f", a - b);
+                                   break;
+                               case 3:
+                                   puts("Vvedite pervoe znachenie 'Umnozhenie'.");
+                                   scanf("%f", &a);
+                                   puts("Vvedite vtoroe znachenie.");
+                                   scanf("%f", &b);
+                                   printf("A * B = %f", a * b);
+                                   break;
+                               case 4:
+                                   puts("Vvedite pervoe znachenie 'Delenie'.");
+                                   scanf("%f", &a);
+                                   puts("Vvedite vtoroe znachenie.");
+                                   scanf("%f", &b);
+                                       if (b == 0)
+                                       {
+                                           puts("Error!");
+                                       }
+                                       else
+                                       {
+                                           printf("A / B = %f", a / b);
+                                       }
+                                   break;
+                               case 5:
+                                   puts("Vi vibrali operaciyu 'Vozvedenie v stepen'.");
+                                   puts("Vvedite znachenie.");
+                                   scanf("%f", &a);
+                                   puts("Vvedite stepen znacheniya.");
+                                   scanf("%i", &n);
+                                   i = 1;
+                                   for (; n > 0; --n)
+                                   {
+                                       i = i * a;
+                                   }
+                                   printf("A ^ N = %f", i);
+                                   break;
+                               case 6:
+                                   puts("Vi vibrali operaciyu 'Factorial'.");
+                                   puts("Vvedite znachenie.");
+                                   scanf("%f", &a);
+                                       if (a == 0)
+                                       {
+                                           printf("A! = 1");
+                                       }
+                                       else
+                                       {
+                                           i = 1;
+                                           for (n = 1; n <= a; n++)
+                                           {
+                                               i = i * n;
+                                           }
+                                       printf("A! = %f", i);
+                                       }
+                                   break;
+                               default:
+                                   puts("Error!");
+                                   break;
+
+        }
+
+
+        }
+    } while (x > 0);
+}
