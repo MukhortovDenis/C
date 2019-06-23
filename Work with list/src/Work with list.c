@@ -135,7 +135,6 @@ float *addnumb(FILE *input, int value){ //Добавление числа
 void addelement(input_data *current, FILE *input)
 {
     input_data *tmp = malloc(1 * sizeof(input_data));
-    //Добавление в структуру. Тут все правильно и работает. Честно
     fscanf(input, " %c %c", &tmp->operation, &tmp->type_of_operation);
     if (tmp->operation == 'v') { fscanf(input, " %i", &tmp->value);}
     else
