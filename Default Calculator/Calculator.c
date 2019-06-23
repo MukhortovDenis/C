@@ -1,18 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(void)
+int main(void)//Функция калькулятора, для выбора операции нажмите один из знаков операции или нажмите q для выхода.
 {
-    char operation;
+    char operation;//переменные разного типа
     float a, b, i;
     int n;
     do
     {
                     puts("Vvedite odnu iz operacii: +, -, *, /, ^, !\n Dlya vihoda nazhmite q");
-                    scanf("%c", &operation);
-                           switch(operation)
+                    scanf("%c", &operation);//ввод с клавиатуры операций
+                           switch(operation)//кейсы с операциями
                            {
-                               case '+':
+                               case '+'://сложение
                                    puts("Vi vibrali operaciyu 'slojenie'.");
                                    puts("Vvedite pervoe znachenie.");
                                    scanf("%f", &a);
@@ -20,21 +20,21 @@ int main(void)
                                    scanf("%f", &b);
                                    printf("A + B = %f", a + b);
                                    break;
-                               case '-':
+                               case '-'://вычитание
                                    puts("Vvedite pervoe znachenie 'Vichitanie'.");
                                    scanf("%f", &a);
                                    puts("Vvedite vtoroe znachenie.");
                                    scanf("%f", &b);
                                    printf("A - B = %f", a - b);
                                    break;
-                               case '*':
+                               case '*'://умножение
                                    puts("Vvedite pervoe znachenie 'Umnozhenie'.");
                                    scanf("%f", &a);
                                    puts("Vvedite vtoroe znachenie.");
                                    scanf("%f", &b);
                                    printf("A * B = %f", a * b);
                                    break;
-                               case '/':
+                               case '/'://деление
                                    puts("Vvedite pervoe znachenie 'Delenie'.");
                                    scanf("%f", &a);
                                    puts("Vvedite vtoroe znachenie.");
@@ -48,7 +48,7 @@ int main(void)
                                            printf("A / B = %f", a / b);
                                        }
                                    break;
-                               case '^':
+                               case '^'://возведение в степень
                                    puts("Vi vibrali operaciyu 'Vozvedenie v stepen'.");
                                    puts("Vvedite znachenie.");
                                    scanf("%f", &a);
@@ -61,7 +61,7 @@ int main(void)
                                    }
                                    printf("A ^ N = %f", i);
                                    break;
-                               case '!':
+                               case '!':// факториал
                                    puts("Vi vibrali operaciyu 'Factorial'.");
                                    puts("Vvedite znachenie.");
                                    scanf("%f", &a);
@@ -86,5 +86,5 @@ int main(void)
 
 
 
-    } while (operation != 'q');
+    } while (operation != 'q');//конец цикла, если не нажимали q, то калькулятор начнет заново
 }
